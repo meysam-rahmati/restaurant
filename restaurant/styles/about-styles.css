@@ -1,0 +1,272 @@
+@import 'reset.css';
+
+
+@font-face {
+    font-family: vazirNormal;
+    src: url('../fonts/vaizr.eot');
+    src: url('../fonts/vaizr.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/vazir.ttf') format('truetype'),
+        url('../fonts/vazir.woff') format('woff'),
+        url('../fonts/vazir.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: vazirNormal;
+    direction: rtl;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+#header {
+    background-image: url(../images-cafe/pexels-chan-walrus-941861.jpg);
+    width: 100%;
+    height: 250px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+}
+
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+
+}
+
+
+#nav ul {
+    width: 50%;
+    display: flex;
+}
+
+
+#nav ul li {
+    padding-left: 50px;
+}
+
+#nav ul li::after {
+    width: 0;
+    content: '';
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: #f33446;
+    transition: 0.5s;
+}
+
+#nav ul li:hover:after {
+    width: 100%;
+    margin-top: 3px;
+}
+
+#nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    /* color: rgb(255, 0, 0); */
+}
+
+#nav .logo {
+    width: 200px;
+    height: 50px;
+    }
+
+    
+#nav .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    position: fixed;
+    top: 55px;
+    right: -250px;
+    width: 200px;
+    background: rgb(255, 0, 0);
+    background: linear-gradient(9deg, rgba(255, 0, 0, 0.862698424096201) 0%, rgba(0, 0, 0, 0.8066760151326156) 100%);
+    color: #fff;
+    height: 300px;
+    z-index: 9999;
+}
+
+.menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu ul li:hover a {
+    color: #f33446;
+}
+
+.fa-xmark {
+    position: absolute;
+    top: 10;
+    left: 0;
+    cursor: pointer;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 55px;
+    right: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 998;
+}
+
+/* CONTAINER */
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+.container .about-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.container .about-img {
+    width: 50%;
+    height: 400px;
+    border-radius: 10px;
+    border: 1px solid red;
+    margin: 10px;
+    box-shadow: 0px -1px 10px 10px rgba(0, 0, 0, 0.47);
+}
+
+.container .about-content img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+
+}
+
+.container .title {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin: 20px 0;
+}
+
+.container .about-title {
+    width: 50%;
+    height: auto;
+    line-height: 30px;
+    text-align: justify;
+    margin: 10px;
+  
+}
+
+/* chefs style */
+.chefs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.chef-content {
+    width: 250px;
+    height: 350px;
+    margin: 15px 5px;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.chef-content img {
+    width: 50%;
+    height: 50%;
+    border-radius: 50%;
+}
+
+.chef-content p {
+    margin: 30px 10px;
+    text-align: justify;
+    line-height: 20px;
+}
+/* FOOTER */
+#footer {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(9deg, rgba(255, 0, 0, 0.862698424096201) 0%, rgba(0, 0, 0, 0.8066760151326156) 100%);
+    margin-top: 30px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .phone h1 {
+    padding: 5px;
+    font-size: 20px;
+    color: #fff;
+}
+
+#footer .phone h4 {
+    font-size: 15px;
+    color: #fff;
+    padding: 5px;
+}
+
+#footer .addres {
+    color: #fff;
+    padding: 5px;
+    font-size: 20px;
+
+}
+
+#footer .addres .fa-brands {
+    font-size: 25px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+
+@media screen and (max-width: 760px) {
+    #nav {
+        justify-content: center;
+        height: 200px;
+    }
+
+    #nav ul {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline;
+    }
+
+
+    .about-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .about-content .about-img {
+        width: 80%;
+    }
+    .container .about-title {
+        width: 100%;
+    }
+
+    .chef-content {
+    width: 150px;
+    }
+    .chef-content p {
+        margin: 5px;
+        font-size: 15px;
+    }
+
+}

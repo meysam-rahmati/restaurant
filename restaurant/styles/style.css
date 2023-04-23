@@ -1,0 +1,396 @@
+@import 'reset.css';
+
+
+@font-face {
+    font-family: vazirNormal;
+    src: url('../fonts/vaizr.eot');
+    src: url('../fonts/vaizr.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/vazir.ttf') format('truetype'),
+        url('../fonts/vazir.woff') format('woff'),
+        url('../fonts/vazir.woff2') format('woff2');
+    font-weight: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: vazirNormal;
+    direction: rtl;
+}
+
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* HEADER STYLES */
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+#header {
+    background-image: url(../images-cafe/grilled-beef-steak-dark-wooden-surface.jpg);
+    height: 760px;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
+
+
+#nav {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+
+}
+
+
+#nav ul {
+    width: 50%;
+    display: flex;
+}
+
+
+#nav ul li {
+    padding-left: 50px;
+}
+
+#nav ul li::after {
+    width: 0;
+    content: '';
+    height: 2px;
+    display: block;
+    margin: auto;
+    background: #f33446;
+    transition: 0.5s;
+}
+
+#nav ul li:hover:after {
+    width: 100%;
+    margin-top: 3px;
+}
+
+
+#nav .logo {
+width: 200px;
+height: 50px;
+}
+   
+#nav .logo img{
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    position: fixed;
+    top: 55px;
+    right: -250px;
+    width: 200px;
+    background: rgb(255, 0, 0);
+    background: linear-gradient(9deg, rgba(255, 0, 0, 0.862698424096201) 0%, rgba(0, 0, 0, 0.8066760151326156) 100%);
+    color: #fff;
+    height: 300px;
+    z-index: 9999;
+}
+
+.menu ul li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+.menu ul li:hover a {
+    color: #f33446;
+}
+
+.fa-xmark {
+    position: absolute;
+    top: 10;
+    left: 0;
+    cursor: pointer;
+}
+
+.menu-icon {
+    position: fixed;
+    top: 55px;
+    right: 25px;
+    cursor: pointer;
+    display: none;
+    z-index: 998;
+}
+
+.header-title {
+    font-size: 3rem;
+    position: relative;
+    top: 60px;
+    color: #fff;
+
+}
+
+.header-title .titles h2 {
+    font-size: 80px;
+    font-weight: 100;
+}
+
+.header-title .titles h3 {
+    font-size: 25px;
+    padding: 20px 15px;
+}
+
+/* START MENU */
+#menu {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px auto;
+
+}
+
+#menu .food-box {
+    text-align: center;
+    width: 33%;
+    height: 470px;
+}
+
+#menu .title {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+#menu .food {
+    background-size: cover;
+    height: 90%;
+    border-radius: 15px;
+    box-shadow: -3px 2px 9px 2px rgba(0, 0, 0, 0.23);
+    position: relative;
+    cursor: pointer;
+
+}
+
+#menu .food-box .food .img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+.food-box .menu-image {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    opacity: 0;
+    top: 0;
+    left: 0;
+    transition: .5s ease-out;
+}
+
+.food:hover .menu-image {
+    opacity: 1;
+}
+
+/* END MENU */
+/* START RESEV BOX */
+#back-resev {
+    background-image: url(../images-cafe/pizza-time-tasty-homemade-traditional-pizza-italian-recipe.jpg);
+    background-size: cover;
+    width: 100%;
+    background-repeat: no-repeat;
+    height: 600px;
+    box-shadow: 0px -1px 10px 10px rgba(0, 0, 0, 0.27);
+    position: relative;
+}
+
+#back-resev .resev {
+
+    text-align: center;
+    color: #ffffff;
+    position: absolute;
+    top: 40%;
+
+}
+
+#back-resev .resev-box h1 {
+    margin: 20px;
+    font-size: 1.5rem;
+}
+
+#back-resev .resev-box h2 {
+    font-size: 20px;
+}
+
+#back-resev .resev-box .sub-btn {
+    padding: 20px;
+    border: 1px solid #fff;
+    width: 70%;
+    border-radius: 15px;
+    background-color: transparent;
+    margin-top: 20px;
+    color: #fff;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+#back-resev .resev-box .sub-btn:hover {
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+
+}
+
+
+/* START BRANCH */
+.title-branch {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 35px;
+    font-weight: 400;
+
+}
+
+#branch {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+
+}
+
+#branch .flex-box {
+    width: 30%;
+    height: 450px;
+    box-shadow: 0px -1px 10px 10px rgba(0, 0, 0, 0.27);
+    border-radius: 15px;
+
+}
+
+#branch .branch-content {
+    position: relative;
+    box-sizing: border-box;
+    height: 100%;
+    cursor: pointer;
+}
+
+
+#branch .branch-content img {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+
+.header-branch {
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    background-color: #fff;
+    border-radius: 0 0 15px 15px;
+    box-shadow: 0px -1px 10px 10px rgba(0, 0, 0, 0.47);
+    transition: ease-out .5s;
+
+}
+
+.branch-content:hover .header-branch {
+    opacity: 0.8;
+}
+
+.branch-content .title-branch {
+    color: rgb(10, 10, 10);
+    font-size: 1.5rem;
+    text-align: right;
+}
+
+/* FOOTER */
+
+#footer {
+    background: rgb(255, 0, 0);
+    background: linear-gradient(9deg, rgba(255, 0, 0, 0.862698424096201) 0%, rgba(0, 0, 0, 0.8066760151326156) 100%);
+    margin-top: 30px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .phone h1 {
+    padding: 5px;
+    font-size: 20px;
+    color: #fff;
+}
+
+#footer .phone h4 {
+    font-size: 15px;
+    color: #fff;
+    padding: 5px;
+}
+
+#footer .addres {
+    color: #fff;
+    padding: 5px;
+    font-size: 20px;
+
+}
+
+#footer .addres .fa-brands {
+    font-size: 25px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+
+/*  MEDIA QURIES RESPONSIVE */
+
+
+@media (max-width: 760px) {
+    #nav {
+        justify-content: center;
+    }
+
+    #nav ul {
+        display: none;
+    }
+
+    .menu-icon {
+        display: inline;
+    }
+
+
+    #menu {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    #menu .food-box {
+        width: 100%;
+        height: 470px;
+        border-radius: 15px;
+    }
+
+    #menu .food-box .food img {
+        width: 100%;
+        height: 100%;
+        border-radius: 15px;
+    }
+
+
+    #branch {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        flex-direction: column;
+
+    }
+
+
+    #branch .flex-box {
+        width: 100%;
+        margin: 20px auto;
+        height: 450px;
+    }
+}
